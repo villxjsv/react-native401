@@ -1,18 +1,20 @@
-// import { ObjectLiterals } from './typescript/ObjectLiterals'
-import { BasicFunctions } from './typescript/BasicFunction'
 // import { BasicTypes } from './typescript/BasicTypes'
-function App() {
+// import { ObjectLiterals } from './typescript/ObjectLiterals'
+// import { BasicFunctions } from './typescript/BasicFunctions'
 
+import { Counter } from "./components/Counter"
+
+function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">React + TS</h1>
+    <div className="flex flex-col justify-center items-center min-h-svh">
+      <h1 className="text-3xl font-bold underline text-blue-500">React + TS</h1>
 
       {/* <BasicTypes /> */}
-
       {/* <ObjectLiterals /> */}
 
-      <BasicFunctions />
-    </>
+      {/* <BasicFunctions /> */}
+      <Counter />
+    </div>
   )
 }
 
