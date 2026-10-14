@@ -3,10 +3,15 @@ export const BasicFunctions = () => {
         return a + b;
     };
 
+    const calcularTriple = (num: number): number => {
+        return num * 3;
+    };
+
     return (
         <>
             <h3>Funciones Básicas</h3>
-            <span>El resultado de sumar 2+ 8 {addTwoNumbers(2, 8)}</span>
+            <p>El resultado de sumar {addTwoNumbers(2, 8)}</p>
+            <p>El triple de 15 es {calcularTriple(15)}</p>
         </>
     );
 };

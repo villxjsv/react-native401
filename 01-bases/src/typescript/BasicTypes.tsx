@@ -4,7 +4,7 @@ export const BasicTypes = () => {
   const age: number = 20;
   const isStudent: boolean = true;
 
-  const superheroes: String[] = [' Superman', 'Goku', 'Batman', 'Spiderman', 'Ironman'];
+  const superheroes: string[] = [' Superman', 'Goku', 'Batman', 'Spiderman', 'Ironman'];
 
 
   return (
