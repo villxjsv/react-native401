@@ -21,11 +21,14 @@ export const UsersPage = () => {
           <UserRow />
           <UserRow />
           <UserRow />
-
-
         </tbody>
 
       </table>
+
+      <div className="flex justify-around w-[500px] mt-2">
+        <button className="p-2 bg-amber-500 text-black rounded-[5px]">Anteriores</button>
+        <button className="p-2 bg-amber-500 text-black rounded-[5px]">Siguientes</button>
+      </div>
 
     </>
   )
