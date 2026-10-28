@@ -1,5 +1,7 @@
 import { UserRow } from "./UserRow"
 
+// curl \
+//   "https://reqres.in/api/users?page=2"
 export const UsersPage = () => {
 
 
