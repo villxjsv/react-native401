@@ -1,15 +1,23 @@
-export const UserRow = () => {
+import type { User } from "../interfaces/reqres.response";
+
+interface UserRowProps {
+    user: User;
+}
+
+export const UserRow = ({ user }: UserRowProps) => {
     return (
         <tr>
             <td>
-                <img src="" className="rounded-full w-14" alt="User Avatar" />
+                <img
+                    src={user.avatar}
+                    alt={`Avatar de ${user.first_name} ${user.last_name}`}
+                    className="h-[50px] w-[50px] rounded-full w-14 p-2"
+                />
             </td>
             <td>
-                {'Julio'} {'Villaseca'}
+                {user.first_name} {user.last_name}
             </td>
-            <td>
-                {'julio.villaseca@gmail.com'}
-            </td>
+            <td>{user.email}</td>
         </tr>
-    )
-}
+    );
+};

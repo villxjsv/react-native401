@@ -1,21 +1,15 @@
-import { useUsers } from "../hooks/useUsers"
-import { UserRow } from "./UserRow"
+import { useUsers } from "../hooks/useUsers";
+import { UserRow } from "./UserRow";
 
-// curl \
-//   "https://reqres.in/api/users?page=2"
 export const UsersPage = () => {
-
-
-  const { users } = useUsers();
+  const { users, nextPage, previousPage } = useUsers();
   console.log(users);
 
-
   return (
-
     <>
       <h3>Usuarios</h3>
 
-      <table className="w-[500px] bg-blue-400 rounded-xl text-black">
+      <table className="w-[500px] rounded-xl bg-black text-white">
         <thead>
           <tr>
             <th>Avatar</th>
@@ -25,18 +19,26 @@ export const UsersPage = () => {
         </thead>
 
         <tbody>
-          <UserRow />
-          <UserRow />
-          <UserRow />
+          {users.map((user) => (
+            <UserRow key={user.id} user={user} />
+          ))}
         </tbody>
-
       </table>
 
-      <div className="flex justify-around w-[500px] mt-2">
-        <button className="p-2 bg-amber-500 text-black rounded-[5px]">Anteriores</button>
-        <button className="p-2 bg-amber-500 text-black rounded-[5px]">Siguientes</button>
+      <div className="mt-2 flex w-[500px] justify-around">
+        <button
+          className="rounded-[5px] bg-blue-500 p-2 text-green-500"
+          onClick={previousPage}
+        >
+          Anteriores
+        </button>
+        <button
+          className="rounded-[5px] bg-red-500 p-2 text-green-500"
+          onClick={nextPage}
+        >
+          Siguientes
+        </button>
       </div>
-
     </>
-  )
-}
+  );
+};
