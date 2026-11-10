@@ -9,7 +9,7 @@ export const UsersPage = () => {
     <>
       <h3>Usuarios</h3>
 
-      <table className="w-[500px] rounded-xl bg-black text-white">
+      <table className="w-[500px] rounded-xl bg-violet-500 text-black">
         <thead>
           <tr>
             <th>Avatar</th>
@@ -27,13 +27,13 @@ export const UsersPage = () => {
 
       <div className="mt-2 flex w-[500px] justify-around">
         <button
-          className="rounded-[5px] bg-blue-500 p-2 text-green-500"
+          className="rounded-[5px] bg-violet  -500 p-2 text-green-500"
           onClick={previousPage}
         >
           Anteriores
         </button>
         <button
-          className="rounded-[5px] bg-red-500 p-2 text-green-500"
+          className="rounded-[5px] bg-violet-500 p-2 text-green-500"
           onClick={nextPage}
         >
           Siguientes
