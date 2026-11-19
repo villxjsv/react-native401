@@ -1,39 +1,47 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import FAB from './components/FAB';
+  import { StatusBar } from 'expo-status-bar';
+  import { useState } from 'react';
+  import { Pressable, StyleSheet, Text, View } from 'react-native';
+  import FAB from './components/FAB';
 
-export default function App() {
+  export default function App() {
 
-  const [count, setCount] = useState(10);
+    const [count, setCount] = useState(10);
 
-  return (
-    <View style={[styles.container, { backgroundColor: 'orange' }]}>
+    return (
+      <View style={[styles.container, { backgroundColor: 'green' }]}>
 
-      <Text style={styles.textHuge}>{count}</Text>
-      <FAB 
-      label="+1" 
-      onPress={() => setCount(count + 1)}
-      onLongPress={() => setCount(0)}
-      />
+        <Text style={styles.textHuge}>{count}</Text>
 
-      <StatusBar style="light" />
-    </View>
-  );
-}
+        <FAB
+          label="+1"
+          onPress={() => setCount(count + 1)}
+          onLongPress={() => setCount(0)}
+          position="right"
+        />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    //backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+        <FAB
+          label="Reset"
+          onPress={() => setCount(10)}
+        position="left"
+        />
 
-  textHuge: {
-    fontSize: 120,
-    fontWeight: '300',
-  },
+        <StatusBar style="light" />
+      </View>
+    );
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      //backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
+    textHuge: {
+      fontSize: 120,
+      fontWeight: '300',
+    },
 
 
-});
+  });     
